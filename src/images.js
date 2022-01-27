@@ -1,5 +1,5 @@
 import img1 from './Action_03.png';
-import img2 from './pp1.png';
+import img2 from './Shape_03.png';
 import img3 from './Shape_02.png';
 import img4 from './Person_01.png';
 import img5 from './Shape_06.png';

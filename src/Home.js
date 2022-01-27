@@ -1,6 +1,7 @@
 import GridLayout from 'react-grid-layout';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
+import logo from './pp1.png';
 
 function Home(props) {
 	const { items, images } = props;
@@ -11,12 +12,18 @@ function Home(props) {
 			items={items}
 			layout={layout}
 			allowOverlap={true}
-			cols={16}
-			rowHeight={20}
+			cols={10}
+			rowHeight={50}
 			width={1200}
 			isResizable={false}
+			autoSize={true}
+			compactType={'Horizonal'}
 			useCSSTransforms={true}>
 			{generateDOM(items, images)}
+
+			<div key='9'>
+				<img draggable={false} className='midsize' src={logo} alt='' />
+			</div>
 		</GridLayout>
 	);
 }
@@ -55,6 +62,7 @@ function generateDOM(items, images) {
 						delayHide={300}
 						delayShow={700}
 						effect='solid'
+						arrowColor='transparent'
 						getContent={() => {
 							return (
 								<div>

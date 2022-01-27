@@ -32,7 +32,6 @@ function App() {
 							</li>
 						</ul>
 
-						<hr />
 						<Switch>
 							<Route exact path='/'>
 								<Home items={items} images={images} />
