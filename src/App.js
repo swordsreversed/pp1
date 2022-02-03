@@ -6,6 +6,8 @@ import About from './About.js';
 import Home from './Home.js';
 import Participants from './Participants.js';
 import Post from './Post.js';
+import Test from './Test.js';
+import logo from './pp1.png';
 
 function App() {
 	let shuffArray = shuffleArray(imageArray);
@@ -16,25 +18,36 @@ function App() {
 		<div className='App'>
 			<header>
 				<Router>
+					<div className='heading'>
+						<div>
+							<Link to='/'>
+								<img className='midsize' src={logo} alt='logo' />
+							</Link>
+						</div>
+						<div>
+							<ul>
+								<li>
+									<Link to='/'>Home</Link>
+								</li>
+								<li>
+									<Link to='/about'>About</Link>
+								</li>
+								<li>
+									<Link to='/team'>Participants</Link>
+								</li>
+								<li>
+									<Link to='/test'>Content</Link>
+								</li>
+								<li>
+									<Link to='/oldtest'>Test Drag</Link>
+								</li>
+							</ul>
+						</div>
+					</div>
 					<div>
-						<ul>
-							<li>
-								<Link to='/'>Home</Link>
-							</li>
-							<li>
-								<Link to='/about'>About</Link>
-							</li>
-							<li>
-								<Link to='/team'>Participants</Link>
-							</li>
-							<li>
-								<Link to='/test'>Content</Link>
-							</li>
-						</ul>
-
 						<Switch>
 							<Route exact path='/'>
-								<Home items={items} images={images} />
+								<Test images={images} />
 							</Route>
 							<Route path='/about'>
 								<About />
@@ -44,6 +57,9 @@ function App() {
 							</Route>
 							<Route path='/test'>
 								<Post />
+							</Route>
+							<Route path='/oldtest'>
+								<Home items={items} images={images} />
 							</Route>
 						</Switch>
 					</div>

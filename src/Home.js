@@ -12,7 +12,7 @@ function Home(props) {
 			items={items}
 			layout={layout}
 			allowOverlap={true}
-			cols={10}
+			cols={60}
 			rowHeight={50}
 			width={1200}
 			isResizable={false}

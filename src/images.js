@@ -8,5 +8,6 @@ import img7 from './Text_02.png';
 import img8 from './Shape_04.png';
 
 const imgArray = [ img1, img2, img3, img4, img5, img6, img7, img8 ];
+const imgArray2 = [ img1, img2, img3 ];
 
 export default imgArray;
